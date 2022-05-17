@@ -1,0 +1,56 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 40px;
+  padding: 30px;
+}
+
+li {
+  list-style: none;
+  border-bottom: 1px solid grey;
+  padding: 5px;
+}
+
+.leaderboard-container {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 700px;
+}
+
+.left-container {
+  min-width: 300px;
+}
+
+.scores-display {
+  border: 1px solid #000;
+  margin-top: 20px;
+}
+
+.add-heading,
+.recent {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.refresh {
+  padding: 3px;
+}
+
+.add-score {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-input {
+  padding: 4px 0 4px 4px;
+}
+
+.submit-btn {
+  align-self: flex-end;
+  padding: 3px;
+}
