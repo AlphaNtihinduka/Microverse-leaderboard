@@ -7,7 +7,7 @@
 - CSS
 ​
 ## Live Demo (if available)
-- Live Demo: [@Live demo link](https://alphantihinduka.github.io/Microverse-leaderboard/dist/);
+- Live Demo: [link](https://alphantihinduka.github.io/Microverse-leaderboard/dist/);
 
 ## Getting Started
 To get a local copy up and running follow these simple steps:
