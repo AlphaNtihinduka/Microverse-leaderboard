@@ -29,6 +29,13 @@ git clone git@github.com:AlphaNtihinduka/Microverse-leaderboard.git
 - Twitter: [@twitterhandle](https://twitter.com/AlphaNtihinduka)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ntihinduka-alpha-81bb7b22a/)
 
-# .gitignore
-node_modules/
-test.md
+## 🤝Contributing
+Contributions, issues and feature requests are welcomed.
+
+Feel free to check the [issues](https://github.com/AlphaNtihinduka/Microverse-leaderboard/issues) page
+
+## Show your support
+Give a start 🌟 if you like this project.
+
+## 📃 License
+This project is [MIT](https://github.com/alphantihinduka/Microverse-leaderboard/blob/development/MIT.md) licensed.
