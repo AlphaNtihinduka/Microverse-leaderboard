@@ -10,7 +10,7 @@
 ​
 ## Live Demo (if available)
 
-- Live Demo: [@Live demo link](https://alphantihinduka.github.io/Leaderboard/dist/);
+- Live Demo: [@Live demo link](https://alphantihinduka.github.io/Microverse-leaderboard/dist/);
 
 ## Getting Started
 
