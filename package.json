@@ -1,22 +1,24 @@
 {
-  "name": "Microverse-leaderboard",
+  "name": "Leaderboard",
   "version": "1.0.0",
-  "description": "Leaderboard list app, sending and receiving data from/to the Leaderboard API.",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack serve --open"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AlphaNtihinduka/Microverse-leaderboard.git"
+    "url": "git+https://github.com/AlphaNtihinduka/Leaderboard.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/AlphaNtihinduka/Microverse-leaderboard/issues"
+    "url": "https://github.com/AlphaNtihinduka/Leaderboard/issues"
   },
-  "homepage": "https://github.com/AlphaNtihinduka/Microverse-leaderboard#readme",
+  "homepage": "https://github.com/AlphaNtihinduka/Leaderboard#readme",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.1",
