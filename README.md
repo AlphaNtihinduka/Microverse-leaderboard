@@ -1,2 +1,47 @@
-# Microverse-leaderboard
-Leaderboard list app, sending and receiving data from/to the Leaderboard API.
+# Leaderboard
+
+> Leaderboard list app, sending and receiving data from/to the Leaderboard API.
+
+## Built With
+- HTML
+- CSS
+-JAVASCRIPT
+-Webpack
+​
+## Live Demo (if available)
+
+- Live Demo: [@Live demo link](https://alphantihinduka.github.io/Leaderboard/dist/);
+
+## Getting Started
+
+#To get a local copy up and running follow these simple steps:
+
+-Open terminal and navigate to the folder you would like to put these files.
+-Type these commands into the terminal:
+-git clone git@github.com:AlphaNtihinduka/To-Do-List.git
+-cd todo
+-npm install
+-To build the project with webpack
+    -npm run build
+-Open dist/index.html in you web browser.
+-To run the webpack dev server
+    -npm run start
+-Web browser will open on localhost:8080
+
+## Authors
+
+
+👤 **Author1**
+
+
+- GitHub: [@githubhandle](https://github.com/AlphaNtihinduka)
+
+
+- Twitter: [@twitterhandle](https://twitter.com/AlphaNtihinduka)
+
+
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ntihinduka-alpha-81bb7b22a/)
+
+# .gitignore
+node_modules/
+test.md
