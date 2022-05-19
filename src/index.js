@@ -25,8 +25,6 @@ const sendData = async (data) => {
         // .then((data) => console.log(data))
 }
 
-
-
 const display = (players) => {
     console.log("players",players);
     players.sort((a, b) => b.score - a.score);
@@ -51,7 +49,6 @@ const insertUser = async () => {
     const insertDom = await getData();
     display(insertDom.result)
 }
-
 
 submitBtn.addEventListener("click", (e) => {
     e.preventDefault()
