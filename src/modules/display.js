@@ -1,3 +1,4 @@
+
 const display = (players) => {
   players.sort((a, b) => b.score - a.score);
   let output = '';
