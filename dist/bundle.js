@@ -116,7 +116,27 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ \"./src/index.css\");\n\n\n//# sourceURL=webpack://Leaderboard/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ \"./src/index.css\");\n/* harmony import */ var _modules_sendData_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/sendData.js */ \"./src/modules/sendData.js\");\n/* harmony import */ var _modules_display_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/display.js */ \"./src/modules/display.js\");\n\n\n\n\nconst submitBtn = document.querySelector('.submit-btn');\nconst refreshBtn = document.querySelector('.refresh');\n\nconst url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/QAONJ05W80sFwCly3Cb9/scores/';\n\nconst getData = async () => {\n  const getResponse = await fetch(url);\n  return getResponse.json();\n};\n\nconst insertUser = async () => {\n  const insertDom = await getData();\n  (0,_modules_display_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(insertDom.result);\n};\n\nsubmitBtn.addEventListener('click', (e) => {\n  e.preventDefault();\n  const nameInput = document.getElementById('name').value.trim();\n  const scoreInput = document.getElementById('score').value.trim();\n  if (nameInput !== '' && scoreInput !== '') {\n    (0,_modules_sendData_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])([nameInput, scoreInput]);\n    insertUser();\n  }\n  document.getElementById('form').reset();\n});\n\nrefreshBtn.addEventListener('click', () => {\n  insertUser();\n});\n\n\n//# sourceURL=webpack://Leaderboard/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/display.js":
+/*!********************************!*\
+  !*** ./src/modules/display.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst display = (players) => {\n  players.sort((a, b) => b.score - a.score);\n  let output = '';\n  players.forEach((player) => {\n    output += `\n        <li class=\"name-score\">\n        <span class=\"name\">${player.user}:</span> \n        <span class=\"score\">${player.score}</span>\n        </li>\n        `;\n  });\n  document.querySelector('.scores-display').innerHTML = output;\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (display);\n\n//# sourceURL=webpack://Leaderboard/./src/modules/display.js?");
+
+/***/ }),
+
+/***/ "./src/modules/sendData.js":
+/*!*********************************!*\
+  !*** ./src/modules/sendData.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/QAONJ05W80sFwCly3Cb9/scores/';\n\nconst sendData = async (data) => {\n  const response = await fetch(url, {\n    method: 'POST',\n    headers: {\n      'Content-Type': 'application/json; charset=UTF-8',\n    },\n    body: JSON.stringify({\n      user: data[0],\n      score: data[1],\n\n    }),\n\n  });\n  const dataCall = await response.json();\n  return dataCall;\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (sendData);\n\n//# sourceURL=webpack://Leaderboard/./src/modules/sendData.js?");
 
 /***/ })
 
