@@ -116,7 +116,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ \"./src/index.css\");\n\n\n//# sourceURL=webpack://Leaderboard/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ \"./src/index.css\");\n\r\n\r\nconst url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/QAONJ05W80sFwCly3Cb9/scores/'\r\nconsole.log(url)\r\nconst nameInput = document.querySelector('.name');\r\nconst scoreInput = document.querySelector('.score');\r\nconst submitBtn = document.querySelector('.submit-btn');\r\n\r\nconst sendData = async (user, score) => {\r\n        await fetch((url), {\r\n            method: 'POST',\r\n            headers: {\r\n                'Content-type': 'application/json; charset=UTF-8',\r\n              },\r\n            body: JSON.stringify({\r\n                user,\r\n                score\r\n            })\r\n      \r\n        })\r\n        .then((response) => response.json())\r\n        .then((data) => console.log(data))\r\n}\r\n\r\nsubmitBtn.addEventListener(\"click\", (e) => {\r\n    e.preventDefault()\r\n    const nameInput = document.querySelector('.name').value;\r\n    const scoreInput = document.querySelector('.score').value;\r\n    sendData(nameInput, scoreInput);\r\n})\r\n\n\n//# sourceURL=webpack://Leaderboard/./src/index.js?");
 
 /***/ })
 
