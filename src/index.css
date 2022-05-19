@@ -4,15 +4,27 @@
   box-sizing: border-box;
 }
 
+body {
+  background-image: url(../image/leaderboards.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.leaderboard-wrapper {
+  margin: 100px 0 0 250px;
+  max-width: 700px;
+}
+
 h1 {
-  font-size: 40px;
+  font-size: 50px;
   padding: 30px;
+  color: orangered;
 }
 
 li {
   list-style: none;
   border-bottom: 1px solid grey;
-  padding: 5px;
+  padding: 10px 0 10px 6px;
 }
 
 .leaderboard-container {
@@ -22,12 +34,25 @@ li {
 }
 
 .left-container {
-  min-width: 300px;
+  min-width: 400px;
+  margin-right: 40px;
 }
 
 .scores-display {
   border: 1px solid #000;
   margin-top: 20px;
+  max-height: 300px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  box-shadow: 3px 3px 6px 5px #ccc;
+  color: white;
+  font-size: 25px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.name-score {
+  display: flex;
+  justify-content: space-between;
 }
 
 .add-heading,
@@ -36,8 +61,19 @@ li {
   font-weight: bold;
 }
 
-.refresh {
-  padding: 3px;
+.recent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.refresh,
+.submit-btn {
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 6px;
+  background-color: green;
+  color: white;
+  transition: all 0.5s;
 }
 
 .add-score {
@@ -47,10 +83,18 @@ li {
 }
 
 .form-input {
-  padding: 4px 0 4px 4px;
+  padding: 6px 0 6px 4px;
+  border-radius: 7px;
+  width: 240px;
 }
 
 .submit-btn {
   align-self: flex-end;
   padding: 3px;
+}
+
+.refresh:hover,
+.submit-btn:hover {
+  background-color: white;
+  color: green;
 }
