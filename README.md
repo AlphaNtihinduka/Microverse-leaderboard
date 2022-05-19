@@ -23,6 +23,10 @@ If you installed git you can clone the code to your machine, or download a ZIP o
 ```bash 
 git clone git@github.com:AlphaNtihinduka/Microverse-leaderboard.git
 ```
+## Local installation
+- Open terminal/ git bash
+- npm install
+
 ## Authors
 👤 **Ntihinduka Alpha**
 - GitHub: [@githubhandle](https://github.com/AlphaNtihinduka)
