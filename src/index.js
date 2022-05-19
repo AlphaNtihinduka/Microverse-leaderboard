@@ -2,16 +2,19 @@ import './index.css';
 
 const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/QAONJ05W80sFwCly3Cb9/scores/';
 const submitBtn = document.querySelector('.submit-btn');
+const refreshBtn = document.querySelector('.refresh');
 
-const sendData = async (user, score) => {
+const sendData = async (data) => {
+    console.log("data",data)
         const response = await fetch(url, {
             method: 'POST',
             headers: {
-                'Content-type': 'application/json; charset=UTF-8',
+                'Content-Type': 'application/json; charset=UTF-8',
               },
             body: JSON.stringify({
-                user,
-                score
+                user: data[0], 
+                score: data[1]
+
             })
       
         })
@@ -22,23 +25,7 @@ const sendData = async (user, score) => {
         // .then((data) => console.log(data))
 }
 
-// const getData = async (user, score) => {
-//     const response = await fetch(url, {
-//         method: 'GET',
-//         headers: {
-//             'Content-type': 'application/json; charset=UTF-8',
-//           },
-//         body: JSON.stringify({
-//             user,
-//             score
-//         })
-//     })
-//     const dataCall = await response.json();
-//     console.log(dataCall)
-//     return dataCall
-//     // .then((response) => response.json())
-//     // .then((data) => console.log(data))
-// }
+
 
 const display = (players) => {
     console.log("players",players);
@@ -55,21 +42,27 @@ const display = (players) => {
     document.querySelector(".scores-display").innerHTML = output;
 }
 
+const getData = async () => {
+    const getResponse = await fetch(url)
+    return getResponse.json()
+}
 
-const displayScores = async () => {
-    await fetch(URL)
-      .then((response) => response.json())
-      .then((json) => {
-        console.log("json", json)
-        console.log("result",result)
-        display(json.result)
-      });
-  };
-displayScores()
+const insertUser = async () => {
+    const insertDom = await getData();
+    display(insertDom.result)
+}
+
 
 submitBtn.addEventListener("click", (e) => {
     e.preventDefault()
     const nameInput = document.getElementById('name').value;
     const scoreInput = document.getElementById('score').value;
-    sendData(nameInput, scoreInput);
+    if (nameInput !== "" && scoreInput !== "") {
+         sendData([nameInput, scoreInput]);
+        insertUser()
+    }
+})
+
+refreshBtn.addEventListener("click", () => {
+   insertUser()
 })
