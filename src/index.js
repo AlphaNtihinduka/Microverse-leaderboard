@@ -1,6 +1,6 @@
 import './index.css';
-import sendData from '../modules/sendData.js';
-import display from '../modules/display.js';
+import sendData from './modules/sendData.js';
+import display from './modules/display.js';
 
 const submitBtn = document.querySelector('.submit-btn');
 const refreshBtn = document.querySelector('.refresh');
