@@ -208,7 +208,7 @@ npm run build
 
 
 - [ ] **Spinner to show when a network call is runing in the background**
-- [ ] **Reservation feature**
+- [ ] **Display the best scorer**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
