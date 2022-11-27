@@ -7,15 +7,19 @@
 body {
   background-image: url(../image/leaderboards.svg);
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   position: relative;
+  height: 100vh;
+  width: 100vw;
 }
 
 .leaderboard-wrapper {
   position: absolute;
-  left: 10%;
   display: flex;
   flex-direction: column;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 h1 {
@@ -45,7 +49,7 @@ li {
 .scores-display {
   border: 1px solid #000;
   margin-top: 10px;
-  max-height: 300px;
+  max-height: 30rem;
   overflow-y: scroll;
   overflow-x: hidden;
   box-shadow: 3px 3px 6px 5px #ccc;
@@ -62,7 +66,7 @@ li {
 
 .add-heading,
 .recent {
-  font-size: 30px;
+  font-size: 18px;
   font-weight: bold;
 }
 
@@ -70,7 +74,7 @@ li {
 
 .refresh,
 .submit-btn {
-  padding: 10px;
+  padding: 5px;
   font-size: 18px;
   border-radius: 6px;
   background-color: green;
@@ -80,11 +84,12 @@ li {
 
 .add-score {
   position: fixed;
-  left: 30%;
-  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 1.5rem;
   display: flex;
-  width: 25%;
-  background-color: orange;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1rem;
   flex-direction: column;
   gap: 10px;
 }
