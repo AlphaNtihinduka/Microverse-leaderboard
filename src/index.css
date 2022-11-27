@@ -8,16 +8,19 @@ body {
   background-image: url(../image/leaderboards.svg);
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
 }
 
 .leaderboard-wrapper {
-  margin: 100px 0 0 250px;
-  max-width: 700px;
+  position: absolute;
+  left: 10%;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
   font-size: 50px;
-  padding: 30px;
+  padding: 5px;
   color: orangered;
 }
 
@@ -29,30 +32,32 @@ li {
 
 .leaderboard-container {
   display: flex;
-  justify-content: space-evenly;
-  max-width: 700px;
+  flex-direction: column;
+  max-width: 60rem;
 }
 
-.left-container {
-  min-width: 400px;
-  margin-right: 40px;
+.recent {
+  display: flex;
+  max-width: 100%;
+  justify-content: space-between;
 }
 
 .scores-display {
   border: 1px solid #000;
-  margin-top: 20px;
+  margin-top: 10px;
   max-height: 300px;
   overflow-y: scroll;
   overflow-x: hidden;
   box-shadow: 3px 3px 6px 5px #ccc;
   color: white;
-  font-size: 25px;
+  font-size: 1.5rem;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
 .name-score {
   display: flex;
   justify-content: space-between;
+  padding: 0 0.5rem;
 }
 
 .add-heading,
@@ -61,10 +66,7 @@ li {
   font-weight: bold;
 }
 
-.recent {
-  display: flex;
-  justify-content: space-between;
-}
+
 
 .refresh,
 .submit-btn {
@@ -77,9 +79,14 @@ li {
 }
 
 .add-score {
+  position: fixed;
+  left: 30%;
+  bottom: 0;
   display: flex;
+  width: 25%;
+  background-color: orange;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 
 .form-input {
